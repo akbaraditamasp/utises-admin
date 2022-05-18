@@ -40,7 +40,7 @@ export default function Sale() {
         <title>Penjualan</title>
       </Helmet>
       <Heading>Penjualan</Heading>
-      <div className="bg-white h-64 m-5 lg:m-8 rounded-sm p-5">
+      <div className="bg-white m-5 lg:m-8 rounded-sm p-5">
         <Table>
           <Thead>
             <tr>

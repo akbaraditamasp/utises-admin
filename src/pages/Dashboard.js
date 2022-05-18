@@ -17,13 +17,13 @@ export default function Dashboard() {
 
   const _changeFormat = (count) => {
     if (count >= 1000000000000) {
-      return `${String.format("%.2f", count / 1000000000000)}T`;
+      return `${(count / 1000000000000).toFixed(2).replace(/[.,]00$/, "")} T`;
     } else if (count >= 1000000000) {
-      return `${String.format("%.2f", count / 1000000000)}M`;
+      return `${(count / 1000000000).toFixed(2).replace(/[.,]00$/, "")} M`;
     } else if (count >= 1000000) {
-      return `${String.format("%.2f", count / 1000000)}JT`;
+      return `${(count / 1000000).toFixed(2).replace(/[.,]00$/, "")} JT`;
     } else if (count >= 1000) {
-      return `${String.format("%.2f", count / 1000)}RB`;
+      return `${(count / 1000).toFixed(2).replace(/[.,]00$/, "")} RB`;
     } else {
       return `${count}`;
     }
@@ -59,7 +59,7 @@ export default function Dashboard() {
         <title>Dashboard</title>
       </Helmet>
       <Heading>Dashboard</Heading>
-      <div className="grid grid-flow-row grid-cols-4 gap-5 lg:gap-8 p-5 lg:p-8">
+      <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-4 gap-5 lg:gap-8 p-5 lg:p-8">
         <DashCard
           icon={FaBox}
           boxClassName="bg-primary-base text-white"
